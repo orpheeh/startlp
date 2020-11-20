@@ -1,0 +1,122 @@
+doctype html
+html
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="/css/page/style.css")
+        link(rel="stylesheet" href="/css/page/header.css")
+        link(rel="stylesheet" href="/css/page/apropos.css")
+        link(rel="stylesheet" href="/css/page/produit.css")
+        link(rel="preconnect" href="https://fonts.gstatic.com")
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css")
+        link(href="https://fonts.googleapis.com/css2?family=Poppins&family=Raleway&family=Roboto&display=swap" rel="stylesheet")
+        title Gatax - Gestion automatise des taxations
+
+    body
+        header
+            nav
+                img.logo(src="/img/gatax-white.png" alt="Logo blanc gatax")
+
+                .links
+                    a(href="#") A propos
+                    a(href="#") Produit
+                    a(href="#") Tarif
+                    a(href="#") Doc
+                    a(href="#") Contact
+
+                button.white-button Se connecter
+
+            div.header-message-wrapper
+                .message-container
+                    h1 Le calcul des impots a la portee de tous 
+
+                    p Quel sont les impôts que je dois payer ? Quand ? Pourquoi ? Et combien ça va me coûter? Gatax vous aide à répondre à toutes ces questions.
+
+                    button.white-outline-button Commencer maintenant
+
+                .col-placeholder
+
+        .illustration-container
+            img(src="/img/pc.png" alt="Image de PC")
+
+        main
+
+            section#apropos
+                h1.align-right A propos
+
+                h2.align-right Gatax est une plateforme web et mobile qui propose une solution complete pour le besoin des contribuable en:
+
+                .prestations
+                    .prestation
+                        i(class="fas fa-search") 
+                        span.bold-text Regime fiscal
+                        p Vous renseignant sur les impots auxquels vous etes elligibles
+
+                    .prestation
+                        i(class="fas fa-search") 
+                        span.bold-text Situation fiscale
+                        p Calculant vos impots et vos penalites
+
+                    .prestation
+                        i(class="fas fa-search") 
+                        span.bold-text Alerte
+                        p Vous avertissant des dates de paiement
+
+                    .prestation
+                        i(class="fas fa-search") 
+                        span.bold-text Avantages fiscaux
+                        p Vous informant de vos avantages fiscaux
+
+                    .prestation
+                        i(class="fas fa-search") 
+                        span.bold-text Declaration
+                        p Remplissant automatiquement vos  formulaires de declaration
+
+                    .prestation
+                        i(class="fas fa-search") 
+                        span.bold-text Interlocuteur fiscal
+                        p Indiquant le centre des impots dont vous dependez
+
+
+            section#produit
+
+                h1 Notre produit
+
+                .produits
+                    .produit
+                        .produit-img-container
+                            img(src="/img/pc.png" alt="PC")
+                        .produit-text-container
+                            h3 Regime fiscal
+                            p Obtenez la liste des impots auxquels vous etes assujetis d’apres le code general des impots.
+                            button.outline-green-button En savoir plus
+
+
+                    .produit
+                        .produit-text-container
+                            h3 Regime fiscal
+                            p Obtenez la liste des impots auxquels vous etes assujetis d’apres le code general des impots.
+                            button.outline-green-button En savoir plus  
+                        .produit-img-container
+                            img(src="/img/pc.png" alt="PC")            
+
+                    .produit
+                        .produit-img-container
+                            img(src="/img/pc.png" alt="PC")
+                        .produit-text-container
+                            h3 Regime fiscal
+                            p Obtenez la liste des impots auxquels vous etes assujetis d’apres le code general des impots.
+                            button.outline-green-button En savoir plus
+
+                    .produit
+                        .produit-text-container
+                            h3 Regime fiscal
+                            p Obtenez la liste des impots auxquels vous etes assujetis d’apres le code general des impots.
+                            button.outline-green-button En savoir plus  
+                        .produit-img-container
+                            img(src="/img/pc.png" alt="PC")  
+                            
+                            
+            section#start-button
+              button.big-green-button Commencer maintenant
+        footer

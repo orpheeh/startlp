@@ -1,0 +1,65 @@
+#produit h1 {
+    text-align: center;
+    padding: 2rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-family: 'poppins', sans-serif;
+    font-weight: normal;
+    font-weight: lighter;
+}
+
+#produit {
+    padding: 4rem;
+    background-color: #efefef;
+}
+
+.produit {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding-bottom: 15vh;
+}
+
+.produit > div{
+    width: 50%;
+    padding: 1rem;
+}
+
+.produit-img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.produit-text-container h3 {
+    font-family: 'poppins', sans-serif;
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+.produit-text-container p {
+    font-family: 'raleway', sans-serif;
+    font-size: 1rem;
+    padding-bottom: 1rem;
+}
+
+.produit img {
+    width: 16rem;
+}
+
+.produit:nth-child(2n+1) .produit-img-container {
+    justify-content: flex-end;
+}
+
+.produit:nth-child(2n) .produit-img-container {
+    justify-content: flex-start;
+}
+
+.produit:nth-child(2n) .produit-text-container {
+    justify-content: flex-end;
+}
+
+.produit:nth-child(2n+1) .produit-text-container {
+    justify-content: flex-start;
+}
