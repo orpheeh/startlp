@@ -1,0 +1,51 @@
+
+footer {
+    background-color: #000000;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+footer > div {
+    width: 30%;
+    min-width: 300px;
+    padding: 2rem;
+}
+
+footer * {
+    color: white;
+    font-family: 'raleway', sans-serif;
+    line-height: 1.75rem;
+}
+
+.menus {
+    display: flex;
+    flex-direction: column;
+}
+
+.menus a {
+    display: inline-block;
+    padding: 1rem;
+}
+
+footer img {
+    width: 200px;
+}
+
+footer h3 {
+    margin-top: 2rem;
+}
+
+footer a {
+    padding: 1rem;
+    display: inline-block;
+}
+
+.socials {
+    display: flex;
+}
+
+.socials a {
+    font-size: 3rem;
+}
