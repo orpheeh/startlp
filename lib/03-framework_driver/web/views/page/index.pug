@@ -25,7 +25,7 @@ html
         a(href="#produit" onclick="hideMenu()") Produit
         a(href="#tarif" onclick="hideMenu()") Tarif
         a(href="#contact" onclick="hideMenu()") Contact
-        button.white-button Se connecter
+        button(onclick="window.location.href = 'https://prevente.gatax.link'").white-button Se connecter
         button.cross(onclick="hideMenu()") &times;
 
       button.bars(onclick="showMenu()")
@@ -37,7 +37,7 @@ html
 
           p Quel sont les impôts que je dois payer ? Quand ? Pourquoi ? Et combien ça va me coûter? Gatax vous aide à répondre à toutes ces questions.
 
-          button.white-outline-button(id="start-now") Commencer maintenant
+          button.white-outline-button(id="start-now" onclick="window.location.href = 'https://prevente.gatax.link'") Commencer maintenant
 
         .col-placeholder
 
@@ -169,9 +169,9 @@ html
             .form-group
               input(type="text" placeholder="Telephone" name="tel")
             .form-group
-              text(type="text" placeholder="Message" name="message")
+              textarea#message(name="message", cols="30", rows="10")
             .form-group
-              button Envoyer
+              button.big-green-button Envoyer
 
 
       footer
