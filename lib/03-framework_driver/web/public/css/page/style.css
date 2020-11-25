@@ -4,8 +4,14 @@
     box-sizing: border-box;
 }
 
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
 section {
     padding: 4rem;
+    padding-top: 8rem;
 }
 
 .white-button {
@@ -33,6 +39,12 @@ section {
     border-radius: 4rem;
     border: 1px solid #149449;
     text-transform: uppercase;
+    transition: 0.4;
+}
+
+.outline-green-button:hover {
+    color: #E9AB24;
+    border-color: #E9AB24;
 }
 
 .big-green-button {
@@ -67,3 +79,4 @@ body {
 .align-right {
     text-align: right;
 }
+

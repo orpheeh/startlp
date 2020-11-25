@@ -1,207 +1,211 @@
 doctype html
 html
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport" content="width=device-width, initial-scale=1.0")
-        link(rel="stylesheet" href="/css/page/style.css")
-        link(rel="stylesheet" href="/css/page/header.css")
-        link(rel="stylesheet" href="/css/page/apropos.css")
-        link(rel="stylesheet" href="/css/page/produit.css")
-        link(rel="stylesheet" href="/css/page/tarif.css")
-        link(rel="stylesheet" href="/css/page/contact.css")
-        link(rel="stylesheet" href="/css/page/footer.css")
-        link(rel="preconnect" href="https://fonts.gstatic.com")
-        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css")
-        link(href="https://fonts.googleapis.com/css2?family=Poppins&family=Raleway&family=Roboto&display=swap" rel="stylesheet")
-        title Gatax - Gestion automatise des taxations
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet" href="/css/page/style.css")
+    link(rel="stylesheet" href="/css/page/header.css")
+    link(rel="stylesheet" href="/css/page/apropos.css")
+    link(rel="stylesheet" href="/css/page/produit.css")
+    link(rel="stylesheet" href="/css/page/tarif.css")
+    link(rel="stylesheet" href="/css/page/contact.css")
+    link(rel="stylesheet" href="/css/page/footer.css")
+    link(rel="preconnect" href="https://fonts.gstatic.com")
+    link(href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css")
+    link(href="https://fonts.googleapis.com/css2?family=Poppins&family=Raleway&family=Roboto&display=swap" rel="stylesheet")
+    title Gatax - Gestion automatise des taxations
 
-    body
-        header
-            nav
-                img.logo(src="/img/gatax-white.png" alt="Logo blanc gatax")
+  body
+    nav
+      img.logo(src="/img/gatax-white.png" alt="Logo blanc gatax")
 
-                .links
-                    a(href="#") A propos
-                    a(href="#") Produit
-                    a(href="#") Tarif
-                    a(href="#") Doc
-                    a(href="#") Contact
+      .menus
+        a(href="#apropos" onclick="hideMenu()") A propos
+        a(href="#produit" onclick="hideMenu()") Produit
+        a(href="#tarif" onclick="hideMenu()") Tarif
+        a(href="#contact" onclick="hideMenu()") Contact
+        button.white-button Se connecter
+        button.cross(onclick="hideMenu()") &times;
 
-                button.white-button Se connecter
+      button.bars(onclick="showMenu()")
+        i(class="fas fa-ellipsis-v")
+    header
+      div.header-message-wrapper
+        .message-container(data-aos="zoom-in")
+          h1 Le calcul des impots a la portee de tous 
 
-            div.header-message-wrapper
-                .message-container
-                    h1 Le calcul des impots a la portee de tous 
+          p Quel sont les impôts que je dois payer ? Quand ? Pourquoi ? Et combien ça va me coûter? Gatax vous aide à répondre à toutes ces questions.
 
-                    p Quel sont les impôts que je dois payer ? Quand ? Pourquoi ? Et combien ça va me coûter? Gatax vous aide à répondre à toutes ces questions.
+          button.white-outline-button(id="start-now") Commencer maintenant
 
-                    button.white-outline-button Commencer maintenant
+        .col-placeholder
 
-                .col-placeholder
+    .illustration-container
+      img(src="/img/pc.png" alt="Image de PC")
 
-        .illustration-container
-            img(src="/img/pc.png" alt="Image de PC")
+    main
 
-        main
+      section#apropos
+        .apropos-top
+          h1.align-right A propos
+          h2.align-right Gatax est une plateforme web et mobile qui propose une solution complete pour le besoin des contribuable en:
 
-            section#apropos
-                .apropos-top
-                  h1.align-right A propos
-                  h2.align-right Gatax est une plateforme web et mobile qui propose une solution complete pour le besoin des contribuable en:
+        .prestations
+          .prestation(data-aos="zoom-in-down")
+            i(class="fas fa-search")
+            span.bold-text Regime fiscal
+            p Vous renseignant sur les impots auxquels vous etes elligibles
 
-                .prestations
-                    .prestation
-                        i(class="fas fa-search")
-                        span.bold-text Regime fiscal
-                        p Vous renseignant sur les impots auxquels vous etes elligibles
+          .prestation(data-aos="zoom-in-up")
+            i(class="fas fa-calculator")
+            span.bold-text Situation fiscale
+            p Calculant vos impots et vos penalites
 
-                    .prestation
-                        i(class="fas fa-calculator")
-                        span.bold-text Situation fiscale
-                        p Calculant vos impots et vos penalites
+          .prestation(data-aos="zoom-in-down")
+            i(class="far fa-calendar-alt")
+            span.bold-text Alerte
+            p Vous avertissant des dates de paiement
 
-                    .prestation
-                        i(class="far fa-calendar-alt")
-                        span.bold-text Alerte
-                        p Vous avertissant des dates de paiement
+          .prestation(data-aos="zoom-in-up")
+            i(class="fas fa-edit") 
+            span.bold-text Avantages fiscaux
+            p Vous informant de vos avantages fiscaux
 
-                    .prestation
-                        i(class="fas fa-edit") 
-                        span.bold-text Avantages fiscaux
-                        p Vous informant de vos avantages fiscaux
+          .prestation(data-aos="zoom-in-down")
+            i(class="fas fa-file-signature")
+            span.bold-text Declaration
+            p Remplissant automatiquement vos  formulaires de declaration
 
-                    .prestation
-                        i(class="fas fa-file-signature")
-                        span.bold-text Declaration
-                        p Remplissant automatiquement vos  formulaires de declaration
-
-                    .prestation
-                        i(class="fas fa-map-signs")
-                        span.bold-text Interlocuteur fiscal
-                        p Indiquant le centre des impots dont vous dependez
-
-
-            section#produit
-
-                h1 Notre produit
-
-                .produits
-                    .produit
-                        .produit-img-container
-                            img(src="/img/pc.png" alt="PC")
-                        .produit-text-container
-                            h3 Regime fiscal
-                            p Obtenez la liste des impots auxquels vous etes assujetis d’apres le code general des impots.
-                            button.outline-green-button En savoir plus
+          .prestation(data-aos="zoom-in-up")
+            i(class="fas fa-map-signs")
+            span.bold-text Interlocuteur fiscal
+            p Indiquant le centre des impots dont vous dependez
 
 
-                    .produit
-                        .produit-text-container
-                            h3 Situation fiscale
-                            p Votre situation fiscale, c’est la somme que vous devez reverser à l’état. Pour déterminer la situation fiscale il faut connaitre la somme que vous devez payer pour chaque impôts auxquels vous êtes assujettis ainsi que les pénalités liées aux delais que vous n'avez pas respectés lors des exercices précédents.
-                            button.outline-green-button En savoir plus  
-                        .produit-img-container
-                            img(src="/img/pc.png" alt="PC")            
+      section#produit
 
-                    .produit
-                        .produit-img-container
-                            img(src="/img/pc.png" alt="PC")
-                        .produit-text-container
-                            h3 Declaration
-                            p Imprimez directement la declaration fiscale que vous devez deposer aux impots
-                            button.outline-green-button En savoir plus
+        h1 Notre produit
 
-                    .produit
-                        .produit-text-container
-                            h3 Interlocuteur fiscal
-                            p Trouvez en quelques clics le centre des impots dans lequel ce trouve votre gestionnaire
-                            button.outline-green-button En savoir plus  
-                        .produit-img-container
-                            img(src="/img/pc.png" alt="PC")  
-           
-            section#start-button
-                button.big-green-button Commencer maintenant
-             
-            section#tarif
-                h1 Nos tarifs
-                
-                .forfaits
-                  .forfait
-                    span.circle-text-green 1
-                    p.bold-text Forfait
-                    p.poppins Ce forfait vous donne la possibilite de voir votre regime fiscal et determiner votre situation fiscal.
-                    p.small-gray Forfait conseille pour les particuliers et les entreprises individuelle
-                    button.outline-green-button En profiter   
-                    
-                  .forfait
-                    span.circle-text-green 2
-                    p.bold-text Forfait
-                    p.poppins En plus de la determination du regime et de la situation fiscale, ce forfait vous permet de remplir automatiquement votre declaration fiscal et vous renseigne sur votre interlocuteur fiscal.
-                    p.small-gray Forfait conseille pour les TPE, PME et les agences comptable
-                    button.outline-green-button En profiter   
-                    
-                    
-                  .forfait
-                    span.circle-text-green 3
-                    p.bold-text Forfait
-                    p.poppins Ce forfait vous permet en plus de recevoir des alertes, vous evitant ainsi des penalites
-                    p.small-gray Forfait conseille pour les TPE, PME, agence des impots et les agences comptable 
-                    button.outline-green-button En profiter   
-                    
-                  .forfait
-                    span.circle-text-green 4
-                    p.bold-text Forfait
-                    p.poppins Ayez un controle total sur votre fiscalite
-                    p.small-gray Forfait conseille pour les agences et les experts comptables
-                    button.outline-green-button En profiter
-                    
-            
-            section#contact
-                .contact-form
-                  h2 Nous contacter
-                  form(action="#" method="get")
-                    .form-group
-                      input(type="text" placeholder="Nom et prenom" name="nom")
-                    .form-group
-                      input(type="text" placeholder="Adresse Email" name="email")
-                    .form-group
-                      input(type="text" placeholder="Telephone" name="tel")
-                    .form-group
-                      text(type="text" placeholder="Message" name="message")
-                    .form-group
-                      button Envoyer
-                      
-            
-            footer
-              .col-1
-                img(src="/img/gatax.png" alt="Logo de gatax")
-                
-                p Vous voulez savoir  les impots que vous devez payer, le montant exacte , la date a la quelle vous devez payer  et l’endroit  exacte ou vous devez vous rendre pour deposer la declaration que vous aurez au prealablement remplir, utilise cette application 
-                
-              .col-2
-                h3 MENU
-                
-                .menus
-                  a(href="#") Accueil
-                  a(href="#") A propos
-                  a(href="#") Produit
-                  a(href="#") Tarifs
-                  a(href="#") Contact
-            
-              .col-3
-                h3 NOUS SUIVRE
-                
-                .socials
-                  a(href="#")
-                    i(class="fab fa-facebook-f")
-                  
-                  a(href="#")
-                    i(class="fab fa-linkedin-in")
-                 
-            
-                h3 CONDITIONS LEGALES
-                
-                a(href="#") Conditions générales d'utilisation
-                a(href="#") Politique de confidentialité
-                
-                  
+        .produits
+          .produit(data-aos="fade-up")
+            .produit-img-container
+              img(src="/img/pc.png" alt="PC")
+            .produit-text-container
+              h3 Regime fiscal
+              p Obtenez la liste des impots auxquels vous etes assujetis d’apres le code general des impots.
+              button.outline-green-button En savoir plus
+
+
+          .produit(data-aos="fade-up")
+            .produit-text-container
+              h3 Situation fiscale
+              p Votre situation fiscale, c’est la somme que vous devez reverser à l’état. Pour déterminer la situation fiscale il faut connaitre la somme que vous devez payer pour chaque impôts auxquels vous êtes assujettis ainsi que les pénalités liées aux delais que vous n'avez pas respectés lors des exercices précédents.
+              button.outline-green-button En savoir plus  
+            .produit-img-container
+              img(src="/img/pc.png" alt="PC")            
+
+          .produit(data-aos="fade-up")
+            .produit-img-container
+              img(src="/img/pc.png" alt="PC")
+            .produit-text-container
+              h3 Declaration
+              p Imprimez directement la declaration fiscale que vous devez deposer aux impots
+              button.outline-green-button En savoir plus
+
+          .produit(data-aos="fade-up")
+            .produit-text-container
+              h3 Interlocuteur fiscal
+              p Trouvez en quelques clics le centre des impots dans lequel ce trouve votre gestionnaire
+              button.outline-green-button En savoir plus  
+            .produit-img-container
+              img(src="/img/pc.png" alt="PC")  
+
+      section#start-button
+        button.big-green-button Commencer maintenant
+
+      section#tarif
+        h1 Nos tarifs
+
+        .forfaits
+          .forfait(data-aos="flip-left")
+            span.circle-text-green 0
+            p.bold-text Forfait
+            p.poppins Ce forfait vous donne la possibilite de voir votre regime fiscal et determiner votre situation fiscal.
+            p.small-gray Forfait conseille pour les particuliers et les entreprises individuelle
+            button.outline-green-button En profiter   
+
+          .forfait(data-aos="flip-left")
+            span.circle-text-green 1
+            p.bold-text Forfait
+            p.poppins En plus de la determination du regime et de la situation fiscale, ce forfait vous permet de remplir automatiquement votre declaration fiscal et vous renseigne sur votre interlocuteur fiscal.
+            p.small-gray Forfait conseille pour les TPE, PME et les agences comptable
+            button.outline-green-button En profiter   
+
+
+          .forfait(data-aos="flip-left")
+            span.circle-text-green 2
+            p.bold-text Forfait
+            p.poppins Ce forfait vous permet en plus de recevoir des alertes, vous evitant ainsi des penalites
+            p.small-gray Forfait conseille pour les TPE, PME, agence des impots et les agences comptable 
+            button.outline-green-button En profiter   
+
+          .forfait(data-aos="flip-left")
+            span.circle-text-green 3
+            p.bold-text Forfait
+            p.poppins Ayez un controle total sur votre fiscalite
+            p.small-gray Forfait conseille pour les agences et les experts comptables
+            button.outline-green-button En profiter
+
+
+      section#contact
+        .contact-form
+          h2 Nous contacter
+          form(action="#" method="get")
+            .form-group
+              input(type="text" placeholder="Nom et prenom" name="nom")
+            .form-group
+              input(type="text" placeholder="Adresse Email" name="email")
+            .form-group
+              input(type="text" placeholder="Telephone" name="tel")
+            .form-group
+              text(type="text" placeholder="Message" name="message")
+            .form-group
+              button Envoyer
+
+
+      footer
+        .col-1
+          img(src="/img/gatax.png" alt="Logo de gatax")
+
+          p Vous voulez savoir  les impots que vous devez payer, le montant exacte , la date a la quelle vous devez payer  et l’endroit  exacte ou vous devez vous rendre pour deposer la declaration que vous aurez au prealablement remplir, utilise cette application 
+
+        .col-2
+          h3 MENU
+
+          .footer-menus
+            a(href="#") Accueil
+            a(href="#apropos") A propos
+            a(href="#produit") Produit
+            a(href="#tarif") Tarifs
+            a(href="#contact") Contact
+
+        .col-3
+          h3 NOUS SUIVRE
+
+          .socials
+            a(href="#")
+              i(class="fab fa-facebook-f")
+
+            a(href="#")
+              i(class="fab fa-linkedin-in")
+
+
+          h3 CONDITIONS LEGALES
+
+          a(href="#") Conditions générales d'utilisation
+          a(href="#") Politique de confidentialité
+
+    script(src="https://unpkg.com/aos@2.3.1/dist/aos.js")
+    script(src="/js/page/script.js")
+

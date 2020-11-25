@@ -19,16 +19,6 @@ footer * {
     line-height: 1.75rem;
 }
 
-.menus {
-    display: flex;
-    flex-direction: column;
-}
-
-.menus a {
-    display: inline-block;
-    padding: 1rem;
-}
-
 footer img {
     width: 200px;
 }
