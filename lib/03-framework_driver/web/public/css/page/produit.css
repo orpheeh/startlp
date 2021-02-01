@@ -54,3 +54,13 @@
 .produit img {
     width: 32rem;
 }
+
+#video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#video-container iframe {
+    max-width: 100%;
+}

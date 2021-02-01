@@ -1,8 +1,12 @@
 const express = require("express");
 
+const bodyParser = require("body-parser");
+
 const web = require("./lib/03-framework_driver/web");
 
 const app = express();
+
+app.use(bodyParser.urlencoded({ extended: true }));
 
 web(app);
 

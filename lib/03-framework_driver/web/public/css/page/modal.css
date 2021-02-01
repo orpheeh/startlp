@@ -1,0 +1,29 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #0000008e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    z-index: 999999999999;
+}
+
+.modal-content {
+    background-color: white;
+    width: 300px;
+    max-width: 100%;
+    padding: 1rem;
+    text-align: center;
+}
+
+.modal-content p {
+    font-family: 'poppins', sans-serif;
+}
+
+.hide-modal {
+    display: none;
+}

@@ -10,6 +10,8 @@ html
     link(rel="stylesheet" href="/css/page/tarif.css")
     link(rel="stylesheet" href="/css/page/contact.css")
     link(rel="stylesheet" href="/css/page/footer.css")
+    link(rel="stylesheet" href="/css/page/modal.css")
+    
     link(rel="preconnect" href="https://fonts.gstatic.com")
     link(href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet")
     link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css")
@@ -17,6 +19,11 @@ html
     title Gatax - Gestion automatise des taxations
 
   body
+  
+    if message
+      .modal(id="message-modal")
+        .modal-content
+          p=message
     nav
       img.logo(src="/img/gatax-white.png" alt="Logo blanc gatax")
 
@@ -25,19 +32,20 @@ html
         a(href="#produit" onclick="hideMenu()") Produit
         a(href="#tarif" onclick="hideMenu()") Tarif
         a(href="#contact" onclick="hideMenu()") Contact
-        button(onclick="window.location.href = 'https://prevente.gatax.link'").white-button Se connecter
+        button(onclick="window.location.href = 'https://recette.gatax.link'").white-button Se connecter
         button.cross(onclick="hideMenu()") &times;
 
       button.bars(onclick="showMenu()")
         i(class="fas fa-ellipsis-v")
+              
     header
-      div.header-message-wrapper
+      div.header-message-wrrecetteer
         .message-container(data-aos="zoom-in")
           h1 Le calcul des impots a la portee de tous 
 
           p Quel sont les impôts que je dois payer ? Quand ? Pourquoi ? Et combien ça va me coûter? Gatax vous aide à répondre à toutes ces questions.
 
-          button.white-outline-button(id="start-now" onclick="window.location.href = 'https://prevente.gatax.link'") Commencer maintenant
+          button.white-outline-button(id="start-now" onclick="window.location.href = 'https://recette.gatax.link'") Commencer maintenant
 
         .col-placeholder
 
@@ -94,16 +102,23 @@ html
             .produit-text-container
               h3 Regime fiscal
               p Obtenez la liste des impots auxquels vous etes assujetis d’apres le code general des impots.
-              button.outline-green-button En savoir plus
-
+              a.outline-green-button(href="#video-container") En savoir plus
 
           .produit(data-aos="fade-up")
             .produit-text-container
               h3 Situation fiscale
               p Votre situation fiscale, c’est la somme que vous devez reverser à l’état. Pour déterminer la situation fiscale il faut connaitre la somme que vous devez payer pour chaque impôts auxquels vous êtes assujettis ainsi que les pénalités liées aux delais que vous n'avez pas respectés lors des exercices précédents.
-              button.outline-green-button En savoir plus  
+              a.outline-green-button(href="#video-container") En savoir plus  
             .produit-img-container(data-aos="zoom-in-up")
               img(src="/img/mockup/situation_fiscale.png" alt="Situation fiscale")            
+
+          .produit(data-aos="fade-up")
+            .produit-text-container
+              h3 Alerte de paiement
+              p Pour vous éviter de subir des pénalités, la fonctionnalité alerte de paiement vous permet de programmer des alarmes afin que le système vous envoi des sms et des emails quelque jour avant la date limite de paiement de chaque impôt.
+              a.outline-green-button(href="#video-container") En savoir plus  
+            .produit-img-container(data-aos="zoom-in-up")
+              img(src="/img/mockup/alerte_fiscale.png" alt="Alerte fiscale")  
 
           .produit(data-aos="fade-up")
             .produit-img-container(data-aos="zoom-in-up")
@@ -111,18 +126,21 @@ html
             .produit-text-container
               h3 Declaration
               p Imprimez directement la declaration fiscale que vous devez deposer aux impots
-              button.outline-green-button En savoir plus
+              a.outline-green-button(href="#video-container") En savoir plus
 
           .produit(data-aos="fade-up")
             .produit-text-container
               h3 Interlocuteur fiscal
               p Trouvez en quelques clics le centre des impots dans lequel ce trouve votre gestionnaire
-              button.outline-green-button En savoir plus  
+              a.outline-green-button(href="#video-container") En savoir plus  
             .produit-img-container(data-aos="zoom-in-up")
               img(src="/img/mockup/interlocuteur_fiscal.png" alt="Interlocuteur fiscal")  
 
       section#start-button
-        button.big-green-button Commencer maintenant
+        button.big-green-button(onclick="window.location.href = 'https://recette.gatax.link/compte-utilisateur/inscription'") Commencer maintenant
+
+      section#video-container
+        iframe(width="560" height="315" src="https://www.youtube.com/embed/JSsJYd-EjXQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
 
       section#tarif
         h1 Nos tarifs
@@ -133,14 +151,14 @@ html
             p.bold-text Forfait
             p.poppins Ce forfait vous donne la possibilite de voir votre regime fiscal et determiner votre situation fiscal.
             p.small-gray Forfait conseille pour les particuliers et les entreprises individuelle
-            button.outline-green-button En profiter   
+            button.outline-green-button(onclick="window.location.href = 'https://recette.gatax.link/compte-utilisateur/inscription'") En profiter   
 
           .forfait(data-aos="flip-left")
             span.circle-text-green 1
             p.bold-text Forfait
             p.poppins En plus de la determination du regime et de la situation fiscale, ce forfait vous permet de remplir automatiquement votre declaration fiscal et vous renseigne sur votre interlocuteur fiscal.
             p.small-gray Forfait conseille pour les TPE, PME et les agences comptable
-            button.outline-green-button En profiter   
+            button.outline-green-button(onclick="window.location.href = 'https://recette.gatax.link/compte-utilisateur/inscription'") En profiter   
 
 
           .forfait(data-aos="flip-left")
@@ -148,37 +166,36 @@ html
             p.bold-text Forfait
             p.poppins Ce forfait vous permet en plus de recevoir des alertes, vous evitant ainsi des penalites
             p.small-gray Forfait conseille pour les TPE, PME, agence des impots et les agences comptable 
-            button.outline-green-button En profiter   
+            button.outline-green-button(onclick="window.location.href = 'https://recette.gatax.link/compte-utilisateur/inscription'") En profiter   
 
           .forfait(data-aos="flip-left")
             span.circle-text-green 3
             p.bold-text Forfait
             p.poppins Ayez un controle total sur votre fiscalite
             p.small-gray Forfait conseille pour les agences et les experts comptables
-            button.outline-green-button En profiter
+            button.outline-green-button(onclick="window.location.href = 'https://recette.gatax.link/compte-utilisateur/inscription'") En profiter
 
 
       section#contact
         .contact-form
           h2 Nous contacter
-          form(action="#" method="get")
+          form(action="/message" method="post")
             .form-group
               input(type="text" placeholder="Nom et prenom" name="nom")
             .form-group
               input(type="text" placeholder="Adresse Email" name="email")
             .form-group
-              input(type="text" placeholder="Telephone" name="tel")
+              input(type="text" placeholder="Telephone" name="telephone")
             .form-group
-              textarea#message(name="message", cols="30", rows="10")
+              textarea#message(name="message" cols="30" rows="10" placeholder="Tapez votre message ici..." resizable="false")
             .form-group
               button.big-green-button Envoyer
-
 
       footer
         .col-1
           img(src="/img/gatax.png" alt="Logo de gatax")
 
-          p Vous voulez savoir  les impots que vous devez payer, le montant exacte , la date a la quelle vous devez payer  et l’endroit  exacte ou vous devez vous rendre pour deposer la declaration que vous aurez au prealablement remplir, utilise cette application 
+          p Vous voulez savoir  les impots que vous devez payer, le montant exacte , la date a la quelle vous devez payer  et l’endroit  exacte ou vous devez vous rendre pour deposer la declaration que vous aurez au prealablement remplir, utilise cette recettelication 
 
         .col-2
           h3 MENU
