@@ -1,0 +1,7 @@
+version: "2"
+services:
+    bonusappp:
+        build: .
+        restart: always
+        ports:
+            - "1443:8080"
