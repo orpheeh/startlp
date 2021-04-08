@@ -10,7 +10,7 @@
 }
 
 .contact-form {
-    background-color: #000000;
+    background-color: #ffffff;
     width: 350px;
     overflow: hidden;
     max-width: 100%;
@@ -28,22 +28,22 @@
 .form-group input {
     background-color: transparent;
     border: none;
-    border-bottom: 2px solid white;
-    color: white;
+    border-bottom: 2px solid #149449;
+    color: #149449;
     padding: 0.5rem 0rem;
     width: 100%;
 }
 
 .form-group textarea {
-    border: 2px solid #ffffff;
+    border: 2px solid #149449;
     padding: 1rem;
     background-color: transparent;
-    color: white;
+    color: black;
     resize: none;
 }
 
 #contact h2 {
-    color: white;
+    color: #149449;
     text-align: center;
     padding: 1rem;
 }
